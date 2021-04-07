@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/admin/home.css') }}">
+{% endblock %}
+
+{% block title %}Admin{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Administration</h1>
+        <div class="liens">
+            <div class="box">
+                <div class="content">
+                    <a href="{{ path('admin_actu') }}">Actualités</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <a href="{{ path('adminAdo') }}">Appels d'offres</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <a href="#">ENSET en chiffres</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <a href="#">Carousel</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="content">
+                    <a href="#">Galerie</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

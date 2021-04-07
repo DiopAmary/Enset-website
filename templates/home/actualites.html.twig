@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/actu.css') }}">
+{% endblock %}
+
+{% block title %}Actulités{% endblock %}
+
+{% block body %}
+    <div class="articles">
+        <h1>Actualités</h1>
+        <span class="bar"></span>
+        <div class="liste">
+            {%  for article in articles %}
+                <div class="actu">
+                    <div class="image">
+                        <div class="logo">
+                            <img src="{{ asset('images/logo.png') }}" alt="logo">
+                        </div>
+                        <div class="icon">
+                            <img src="{{ asset('images/news.png') }}" alt="icon">
+                        </div>
+                        <div class="date">{{ article.createdAt | date('d/m/Y') }}</div>
+                    </div>
+                    <div class="title">{{ article.title }}</div>
+                    <div class="bas">
+                        <div class="readmore"><a href="{{ path('actu_show',{'id':article.id}) }}">Lire plus</a></div>
+                    </div>
+                </div>
+            {%  endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ asset('styles/bootstrap/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+        <link href= "{{ asset('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap') }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('styles/nav.css') }}">
+        <link rel="stylesheet" href="{{ asset('styles/footer.css') }}">
+
+
+
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+
+
+    </head>
+    <body>
+        <div class="logo">
+        <div class="img"><img src="{{ asset('images/logo.png') }}" alt="logoEnset"></div>
+        <div class="social">
+            <a href="https://fr-fr.facebook.com/En7media/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" style="font-size:24px;color:#3b5998"></i></a>
+            <a href="https://www.linkedin.com/school/enset-mohammadia/?originalSubdomain=es" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" style="font-size:24px;color:#0072b1"></i></a>
+        </div>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="{{ path('home') }}">Accueil</a></li>
+                <li><a href="{{ path('notre_ecole') }}">Notre école<i class="fa fa-sort-down"></i></a>
+                    <ul>
+                        <div class="others">
+                            <div class="presentation">
+                                <li><a href="{{ path('motDuDirecteur') }}">Mot du directeur</a></li><hr>
+                                <li><a href="{{ path('mission') }}">Mission</a></li><hr>
+                                <li><a href="{{ path('partenariats') }}">Partenariats</a></li><hr>
+                                <li><a href="{{ path('departements') }}">Departements</a></li><hr>
+                                <li><a href="{{ path('enseignants') }}">Enseignants</a></li><hr>
+                                <li><a href="{{ path('contact') }}">Contact</a></li><hr>
+                            </div>
+                            <div class="publication">
+                                <li><a href="{{ path('actualites') }}">Actualités</a></li><hr>
+                                <li><a href="{{ path('appel_offre') }}">Appel d'offre</a></li><hr>
+                                <li><a href="{{ path('pp') }}">Projet personnel (PP)</a></li>
+                            </div>
+                        </div>
+                        <div class="campus">
+                            <li><a href="{{ path('infrastructures') }}">Ressources et infrastructures</a></li><hr>
+                            <li><a href="{{ path('vie_estudiantine') }}">Vie estudiantine</a></li><hr>
+                            <li><a href="{{ path('club') }}">club</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="{{ path('formations') }}">Formations <i class="fa fa-sort-down"></i></a>
+                    <ul>
+                        <div class="init">
+                            <li><a href="{{ path('formation_initiale') }}" style="font-weight: 400;"><i class="fa fa-circle-o" style="font-size:12px;color:#163172"></i>Formation initiale</a></li><hr>
+                            <div class="lis">
+                                <li><a href="{{ path('ingenierie') }}">Ingénierie</a></li><hr>
+                                <li><a href="{{ path('LEP') }}">Licences d'Etudes Professionnelles</a></li><hr>
+                                <li><a href="{{ path('DUT') }}">DUT</a></li>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <li><a href="{{ path('formation_continue') }}" style="font-weight: 400;"><i class="fa fa-circle-o" style="font-size:12px;color:#163172"></i> Formation continue</a> </li><hr>
+                            <div class="lis">
+                                <li><a href="{{ path('master_universite') }}">Master d'Université</a></li><hr>
+                                <li><a href="{{ path('licence_universite') }}">Licence d'Université</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="{{ path('recherche') }}">Recherches<i class="fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="{{ path('labo') }}">Laboratoire SSDIA</a></li><hr>
+                        <li><a href="{{ path('composition') }}">Composition</a></li><hr>
+                        <li><a href="{{ path('equipe') }}">Equipe</a></li><hr>
+                        <li><a href="{{ path('partenaires') }}">Partenaires</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ path('admission') }}">Admission<i class="fa fa-sort-down"></i></a>
+                    <ul>
+                        <li><a href="{{ path('cycle_doctoral') }}">Cycle doctoral</a></li><hr>
+                        <li><a href="{{ path('cycle_ingenieur') }}">Cycle ingénieur</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://ent.univh2c.ma/uPortal/f/welcome/normal/render.uP" target="_blank">E-Learning</a></li>
+            </ul>
+        </div>
+
+    
+        {% block body %}{% endblock %}
+        <div class="footer">
+            <ul>
+                <li><span class="footer_title">ENSET</span><hr class="bar">
+                    <ul>
+                        <li><a href="{{ path('departements') }}">Departements</a></li><hr>
+                        <li><a href="{{ path('enseignants') }}">Enseignants</a></li><hr>
+                        <li><a href="{{ path('mission') }}">Mission</a></li><hr>
+                        <li><a href="{{ path('infrastructures') }}">Ressources et infrastructures</a></li><hr>
+                        <li><a href="{{ path('labo') }}">Laboratoire SSDIA</a></li>
+                    </ul>
+                </li>
+                <li><span class="footer_title">Formations</span><hr class="bar">
+                    <ul>
+                        <li><a href="{{ path('ingenierie') }}">Ingénierie</a></li><hr>
+                        <li><a href="{{ path('LEP') }}">Licences d'Etudes Professionnelles</a></li><hr>
+                        <li><a href="{{ path('DUT') }}">DUT</a></li><hr>
+                        <li><a href="{{ path('master_universite') }}">Master d'Université</a></li><hr>
+                        <li><a href="{{ path('licence_universite') }}">Licence d'Université</a></li>
+                    </ul>
+                </li>
+                <li><span class="footer_title">Autres</span><hr class="bar">
+                    <ul>
+                        <li><a href="{{ path('partenariats') }}">Partenariats</a></li><hr>
+                        <li><a href="{{ path('actualites') }}">Actualités</a></li><hr>
+                        <li><a href="{{ path('admission') }}">Admission</a><hr>
+                        <li><a href="{{ path('vie_estudiantine') }}">Vie estudiantine</a></li><hr>
+                        <li><a href="https://ent.univh2c.ma/uPortal/f/welcome/normal/render.uP" target="_blank">E-Learning</a></li>
+                    </ul>
+                </li>
+                <li><span class="footer_title">Contact</span> <hr class="bar">
+                    <p>Ecole Normale Supérieure de l'Enseignement Technique</p><hr>
+                    <p>BP 159 Bd Hassan II Mohammedia</p><hr>
+                    <p>Tél. : 0523 322220 - 0523 323530</p><hr>
+                    <p>Fax : 05 23 32 25 46</p><hr>
+                    <div class="social">Suivez-nous  :
+                        <a href="https://fr-fr.facebook.com/En7media/" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook-square" style="font-size:24px;color:#3b5998; padding: 0 5px; margin-left:35px"></i></a>
+                        <a href="https://www.linkedin.com/school/enset-mohammadia/?originalSubdomain=es" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin-square" style="font-size:24px;color:#0072b1; padding: 0 5px"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        {% block javascripts %}{% endblock %}
+
+        <script type="text/javascript" src="{{ asset('styles/bootstrap/jquery.slim.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('styles/bootstrap/popper.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('styles/bootstrap/bootstrap.min.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+html body{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.actu{
+    width: 250px;
+    max-height: 250px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.03);
+    margin: 20px;
+    background-color: #fff;
+
+}
+
+.actu .image{
+    border-radius: 5px;
+    position: relative;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    background-color: #dff9fb;
+}
+.actu .image .icon{
+    position: absolute;
+    width: 100px;
+    left: -40px;
+    bottom: 60%;
+}
+.title{
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    height: 70px;
+}
+.actu .image .date{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #163172;
+    opacity: .7;
+    color: #fff;
+}
+
+.actu .bas .readmore{
+    width: 50%;
+    background-color: #163172;
+    opacity: .8;
+}
+.actu .bas .readmore a{
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.actu .bas :hover{
+    opacity: 1;
+}
+.liste{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-around ;
+    flex-flow: row wrap;
+}
+.articles, .appelDOffre{
+    width: 90vw;
+    margin: 20px auto;
+}
+.articles h1 a, .appelDOffre h1 a{
+    text-decoration: none;
+    color: #000;
+}
+.articles h1 a:hover, .appelDOffre h1 a:hover{
+    padding: 10px;
+    background-color: #163172;
+    color: #fff;
+}
+.bar{
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #163172;
+}

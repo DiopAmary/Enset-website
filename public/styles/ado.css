@@ -1,0 +1,31 @@
+.appelDOffre .liste{
+    margin: 15px 0;
+}
+.appelDOffre .boite{
+    width: 270px;
+    padding: 5px;
+    background-color: #163172;
+    margin: 15px;
+
+}
+.appelDOffre .boite .content{
+    width: 260px;
+    padding: 5px;
+    background-color: #fff;
+}
+.appelDOffre .boite .content a{
+    text-decoration: none;
+    font-size: 16px;
+    color: inherit;
+}
+.appelDOffre .boite .content:hover{
+    background-color: #163172;
+    color: white;
+}
+
+.articles{
+    margin-top: 100px;
+}
+.appelDOffre, .ensetChiffre{
+    margin-top:150px;
+}

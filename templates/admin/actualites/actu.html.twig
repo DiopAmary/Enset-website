@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/admin/actu.css') }}">
+{% endblock %}
+
+{% block title %}Admin actualités{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Administration des actualitéss</h1>
+        <div class="box">
+            <a href="{{ path('adminActuAjout') }}" class="btn btn-primary" >Ajouter une actualité</a>
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                    <tr>
+                        <th scope="row">{{ article.id }}</th>
+                        <td>{{ article.title }}</td>
+                        <td>
+                            <a href="{{ path('adminActuEdit', {'id' : article.id}) }}" class="btn btn-secondary">Editer</a>
+                            <a href="{{ path('supprimerActu', {'id' : article.id}) }}" class="btn btn-danger">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="box">
+            <a href="{{  path('adminActuAjout') }}" class="btn btn-primary" >Ajouter une actualité</a>
+        </div>
+    </div>
+{% endblock %}

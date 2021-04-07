@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Article n° {{ article.id }}{% endblock %}
+
+{% block body %}
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.content }}</p>
+    <p class="nb">{{ article.nb }}</p>
+    <a href="#">{{ article.docs }}</a>
+    <p>{{ article.createdAt | date('d/m/Y')}} a {{ article.createdAt | date('H:i')}}</p>
+{% endblock %}

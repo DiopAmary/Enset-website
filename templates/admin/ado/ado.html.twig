@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('styles/admin/actu.css') }}">
+{% endblock %}
+
+{% block title %}Admin appels d'offres{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <h1>Administration des appels d'offres</h1>
+        <div class="box">
+            <a href="{{ path('adminAdoAjout') }}" class="btn btn-primary" >Ajouter un appel d'offre</a>
+        </div>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for adoffre in adoffres %}
+                <tr>
+                    <th scope="row">{{ adoffre.id }}</th>
+                    <td>{{ adoffre.title }}</td>
+                    <td>
+                        <a href="{{ path('adminAdoEdit', {'id' : adoffre.id}) }}" class="btn btn-secondary">Editer</a>
+                        <a href="{{ path('supprimerAdo', {'id' : adoffre.id}) }}" class="btn btn-danger">Supprimer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="box">
+            <a href="{{ path('adminAdoAjout') }}" class="btn btn-primary" >Ajouter un appel d'offre</a>
+        </div>
+    </div>
+{% endblock %}

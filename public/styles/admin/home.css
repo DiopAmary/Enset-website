@@ -1,0 +1,41 @@
+.liens{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.liens a{
+    font-size: 20px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.liens .box{
+    width: 500px;
+    height: 100px;
+    background-color: #163172;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liens .box .content{
+    width: 480px;
+    height: 80px;
+    background-color: #fff;
+}
+.liens .box .content a:hover{
+    background-color: #163172;
+    color: white;
+}
+
+.formulaire{
+    width: 30%;
+    margin: 70px auto;
+}

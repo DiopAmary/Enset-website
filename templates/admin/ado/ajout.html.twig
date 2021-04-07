@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Ajouter un appel d'offre{% endblock %}
+
+{% form_theme adoForm 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+    <style>
+        .box{
+            width: 70%;
+            margin: 10px auto;
+            font-size: 16px;
+        }
+        .box  button{
+            font-size: 16px;
+        }
+    </style>
+    <div class="container mt-5 mb-5">
+        <h1>Ajouter un appel d'offre</h1>
+        <div class="box">
+            {{ form_start(adoForm) }}
+            {{ form_row(adoForm.title, {'label': 'Titre','attr' : {'placeholder' : " titre de l'article"}}) }}
+            {{ form_row(adoForm.content, {'label':'Contenu','attr' : {'placeholder' : " contenu de l'article"}}) }}
+            {{ form_row(adoForm.NB, {'label':'Notez-bien','attr' : {'placeholder' : " notes importantes"}}) }}
+            <button class="btn btn-primary" type="submit">Ajouter l'appel d'offre</button>
+            {{ form_end(adoForm) }}
+        </div>
+    </div>
+{% endblock %}

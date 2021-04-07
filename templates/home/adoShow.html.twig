@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Appel d'offre n° {{ ado.id }}{% endblock %}
+
+{% block body %}
+    <h1>{{ ado.title }}</h1>
+    <p>{{ ado.content }}</p>
+    <p class="nb">{{ ado.nb }}</p>
+
+    <p>{{ ado.createdAt | date('d/m/Y')}} a {{ ado.createdAt | date('H:i')}}</p>
+{% endblock %}
