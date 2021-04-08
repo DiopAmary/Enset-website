@@ -1,2 +1,2 @@
 # Enset-website
-Application web dynamique avec Symfony
+Application web dynamique au titre de l'ENSET de Mohammédia avec Symfony
